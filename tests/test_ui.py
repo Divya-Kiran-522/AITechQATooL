@@ -12,3 +12,5 @@ def test_home_page_serves_ui():
     assert response.status_code == 200
     assert "AI QA Workflow Assistant" in response.text
     assert "Create Session" in response.text
+    assert "Perform Action" in response.text
+    assert "Generate Artifacts" in response.text
