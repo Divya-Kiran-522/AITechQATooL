@@ -1,3 +1,17 @@
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+# Chrome WebDriver Configuration for pytest
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+# Chrome browser configuration
+markers = [
+    "chrome: marks tests as requiring Chrome browser",
+    "firefox: marks tests as requiring Firefox browser",
+]
