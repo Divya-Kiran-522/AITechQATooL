@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+aitechqatool.egg-info/PKG-INFO
+aitechqatool.egg-info/SOURCES.txt
+aitechqatool.egg-info/dependency_links.txt
+aitechqatool.egg-info/top_level.txt
+app/__init__.py
+app/core.py
+app/main.py
+tests/test_generation.py
