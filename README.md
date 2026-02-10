@@ -70,3 +70,26 @@ Open Swagger UI: `http://127.0.0.1:8000/docs`
 - Add prompt templates and LLM integration with guardrails.
 - Add export formats: Markdown, CSV, XLSX, PDF.
 - Add traceability matrix from workflow step -> scenario -> test case.
+
+## Packaging & Local Install
+
+To work with this repository locally using the project's editable install:
+
+PowerShell (Windows):
+
+```powershell
+python -m venv .venv
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process -Force
+. .\.venv\Scripts\Activate.ps1
+pip install -e .
+```
+
+Bash (WSL/Git Bash/macOS):
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e .
+```
+
+After install you can run the test-suite with `pytest`.
