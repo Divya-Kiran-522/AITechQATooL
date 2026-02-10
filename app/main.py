@@ -9,6 +9,7 @@ from pydantic import BaseModel, Field
 
 from app.core import ActionEvent as CoreActionEvent
 from app.core import ActionType, GeneratedArtifacts, SessionData, generate_from_workflow
+from app.ui import get_ui_page
 
 
 class ActionEvent(BaseModel):
@@ -50,6 +51,11 @@ app = FastAPI(
 )
 
 SESSIONS: Dict[str, SessionData] = {}
+
+
+@app.get("/")
+def home():
+    return get_ui_page()
 
 
 @app.get("/health")
